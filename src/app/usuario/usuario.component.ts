@@ -8,11 +8,12 @@ import { Usuario } from '../usuario';
   styleUrls: ['./usuario.component.css']
 })
 export class UsuarioComponent implements OnInit {
-  public usuario:Usuario
-  constructor(private usuarioService: UsuarioService) { }
+  public usuarios:Usuario[] 
+
+  constructor(private usuarioService:UsuarioService) { }
 
   ngOnInit() {
-    this.usuario = this.usuarioService.getUsuario()
+    this.usuarios = this.usuarioService.listaUsuario()
   }
 
 }
